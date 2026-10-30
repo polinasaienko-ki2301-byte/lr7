@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лабораторна робота 7</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <h1>Де я знаходжусь?</h1>
+
+    
+        <form class="controls" onsubmit="return false">
+            <input type="button" id="watch" value="Watch me">
+            <input type="button" id="clearWatch" value="Clear watch">
+        </form>
+
+       
+        <div id="location" class="info">Your location will go here.</div>
+        <div id="distance" class="info">Distance from College will go here.</div>
+
+      
+        <form class="destination" onsubmit="return false">
+            <label>Широта
+                <input type="text" id="destLat" placeholder="48.9226" inputmode="decimal">
+            </label>
+            <label>Довгота
+                <input type="text" id="destLng" placeholder="24.7111" inputmode="decimal">
+            </label>
+            <input type="button" id="setDest" value="Задати пункт призначення">
+            <input type="button" id="goDest" value="Показати на карті">
+        </form>
+        <div id="destInfo" class="info"></div>
+
+        
+        <div id="map"></div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
